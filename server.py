@@ -27,5 +27,5 @@ async def main(request):
 
 
 app = web.Application()
-app.add_routes([web.post('/', main)])
+app.add_routes([web.post('/{param:.*}', main)])
 web.run_app(app)
